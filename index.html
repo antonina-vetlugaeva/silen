@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>СИЛЕН</title>
+        <link rel="stylesheet" href="stylesheet/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <h1><span id="userAnswer"></span></h1>
+    <div class="eraser"><button id="erase" class="erase">Нажми, чтоб стереть это из памяти.</button></div>
+    <p>А потом обратись к нам в центр.</p>
+    <script>
+      let userAnswer = prompt("Скажи, о чем ты хочешь забыть?")
+      document.getElementById("userAnswer").textContent = userAnswer
+
+      $( document ).ready(function(){
+        $( "#erase" ).click(function() {
+          $( "#userAnswer" ).fadeOut( "slow", function() {
+            $( "#userAnswer" ).remove();
+          });
+          $( this ).fadeOut( "slow", function() {
+            $( this ).remove();
+          });
+        });
+      });
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,52 @@
+body {
+  width: 100%;
+}
+
+h1 {
+  display: block;
+  overflow-x: hidden;
+
+  padding-top: 30vh;
+
+  text-align: center;
+
+  color: rgba(51, 53, 113, 1);
+
+  font-family: "Madelyn", sans-serif;
+  font-size: 10vw;
+}
+
+
+
+button {
+  position: relative;
+
+  display: inline-block;
+
+  margin-top: 15vh;
+  padding: 10px 10px 10px 10px;
+
+  text-align: center;
+
+  font-family: "AvantGarde", sans-serif;
+  font-size: 2vw;
+
+}
+
+button:hover{
+  color: rgba(121, 121, 123, 0.6);
+  background-color: rgba(214, 214, 216, 0.6);
+}
+
+.eraser {
+  text-align: center;
+}
+
+p {
+  margin-top: 7.5vh;
+
+  text-align: center;
+
+  font-family: "AvantGarde", sans-serif;
+  font-size: 1.5vw;
+}
