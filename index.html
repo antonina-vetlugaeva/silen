@@ -3,28 +3,30 @@
   <head>
     <meta charset="utf-8">
     <title>СИЛЕН</title>
-        <link rel="stylesheet" href="stylesheet/styles.css">
+    <link rel="stylesheet" href="stylesheet/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.3.1.min.js" charset="utf-8"></script>
   </head>
   <body>
-    <h1><span id="userAnswer"></span></h1>
-    <div class="eraser"><button id="erase" class="erase">Нажми, чтоб стереть это из памяти.</button></div>
-    <p>А потом обратись к нам в центр.</p>
+    <main>
+      <h1><span id="userAnswer"></span></h1>
+      <div class="eraser"><button id="erase" class="erase">Нажми, чтоб стереть это из памяти.</button></div>
+      <p>А лучше обратись к нам в центр.</p>
+    </main>
     <script>
       let userAnswer = prompt("Скажи, о чем ты хочешь забыть?")
       document.getElementById("userAnswer").textContent = userAnswer
 
-      $( document ).ready(function(){
-        $( "#erase" ).click(function() {
-          $( "#userAnswer" ).fadeOut( "slow", function() {
-            $( "#userAnswer" ).remove();
+      $(document).ready(function(){
+        $("#erase").click(function() {
+          $("#userAnswer").fadeOut( "slow", function() {
+            $("#userAnswer").hide();
           });
-          $( this ).fadeOut( "slow", function() {
-            $( this ).remove();
+          $(this).fadeOut("slow", function() {
+            $(this).hide();
           });
         });
       });
     </script>
-
   </body>
 </html>
